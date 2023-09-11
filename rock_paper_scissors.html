@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+    <style type="text/css">
+   		#tt{
+    		height:70px;
+    		width:180px;
+    		margin-right:10px;
+    		border-radius:30px;
+    		border:2px solid black;
+    		font-size:30px;
+    		color:darkgreen;
+    		background-color: pink;
+    	}
+    	#j{
+    		color:blue;
+    		height:20px;
+    		font-size:40px;
+    	}
+    	p{
+    		color:deeppink;
+    		font-size: 30px;
+
+    	}
+    </style>
+</head>
+<body>
+	<center> <h1 style="color:darkmagenta;font-size:70px">Rock Paper Scissor Game</h1>
+		<br>
+		<button onclick="h('rock')"><img src="imag/rock.png" height="120px" width="120px" style="margin-right:60px;" ></button>
+		<button onclick="h('paper')"><img src="imag/paper.png" height="120px" width="120px" style="margin-right:30px"></button>
+
+			<button onclick="h('scissor')"><img src="imag/scissor.png" height="120px" width="120px" style="margin-right:30px"></button><br><br>
+		
+
+	<button onclick="h('rock')" id="tt">rock</button>
+	<button onclick="h('paper')" id="tt">paper</button>
+	<button onclick="h('scissor')" id="tt">scissor</button><br><br>
+	<p> Your choice</p>
+	<button id="b3" style="height:70px;
+    		width:180px;
+    		margin-right:10px;
+    		border-radius:30px;
+    		border:2px solid black;
+    		font-size:30px;
+    		color:darkgreen;
+    		/*background-color:pink;*/"></button><br><br>
+	<!-- <p >Computer Choice</p>
+	<h3 id="b2">jhu</h3> -->
+	<!-- <button id="b2" >click</button><br><br><br> -->
+	<p  id="j"></p>
+	
+<script type="text/javascript">
+	const c=["rock","paper","scissor"]
+	
+	let r=Math.floor(Math.random()*c.length);
+	//console.log(c[r]);
+	let b=document.getElementById("b2")
+	b.innerText=c[r];
+	
+    
+	function h(um){
+		
+        let k=document.getElementById("b3")
+        let a=document.getElementById("j")
+        k.innerText=um;
+        if (c[r]=="scissor" && um=="paper"){
+        	
+        	a.innerText="Computer won "+""<br>" computer choice is"+" "+c[r]
+        }
+         if(c[r]=="paper" && um=="rock"){
+        	a.innerText="You Won"+" computer choice is"+" "+c[r]
+        
+        }
+
+        if(c[r]=="paper" && um=="scissor"){
+        	a.innerText="You Won"+" computer choice is"+" "+c[r]
+        }
+        if(c[r]=="rock" && um=="paper"){
+        	a.innerText="You Won"+" computer choice is"+" "+c[r]
+        
+        }
+        if(c[r]=="scissor" && um=="rock"){
+        	a.innerText="You Won"+" computer choice is"+" "+c[r]
+        
+        }
+        if(c[r]=="rock" && um=="scissor"){
+        	a.innerText="Computer Won"+" computer choice is"+" "+c[r]
+        
+        }
+
+        if(c[r]==um){
+        	a.innerText="Draw"+" computer choice is also "+" "+c[r]
+        }
+        
+
+	}
+</script>
+</body>
+</html>
